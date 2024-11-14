@@ -12,6 +12,41 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: var(--charcoal);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+.demo {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+p,
+li,
+input,
+textarea,
+button,
+label,
+span {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+h1 {
+  color: var(--selective-yellow);
+  font-weight: 900;
+  font-size: 200px;
+}
+
+h2 {
+  font-size: 70px;
+}
+
 
 /* ---------- HEADER AND FOOTER CONTAINER ---------- */
 .sidebar {
@@ -26,4 +61,19 @@
   background-color: var(--charcoal);
   box-shadow: 0 0 20px var(--charcoal);
   z-index: 1;
+}
+
+
+
+
+/* ---------- CONTENT CONTAINER ---------- */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--baby-powder);
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  padding: 50px;
+  padding-left: 350px;
 }
