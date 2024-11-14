@@ -11,28 +11,29 @@ function App() {
     <div>
       <Sidebar />
       <main className="content-container">
-        <div id="home">
+        <section id="home">
           <h1>Karsten Leung</h1>
-          <p className="tag">| Software Developer</p>
-          <p className="tag">| Game Dev Hobbyist</p>
-        </div>
-        <div id="about-me">
+          <div className="tag-container">
+            <p className="tag">| Software Developer</p>
+            <p className="tag">| Game Dev Hobbyist</p>
+          </div>
+        </section>
+        <section id="about-me">
           <h2>Who am I?</h2>
-        </div>
-        <div id="projects">
-          {
-            projects.map(project => 
-              <ProjectItem 
-                name={ project.name }
-                description={ project.description }
-                techStack={ project.techStack }
-                dependencies={ project.dependencies }
-                url={ project.url }
-                image={ `/project-images/${ project.image }` }
-              />
-            )
-          }
-        </div>
+        </section>
+        <section id="projects">
+          <h2>Projects</h2>
+          {projects.map((project) => (
+            <ProjectItem
+              name={project.name}
+              description={project.description}
+              techStack={project.techStack}
+              dependencies={project.dependencies}
+              url={project.url}
+              image={`/project-images/${project.image}`}
+            />
+          ))}
+        </section>
       </main>
     </div>
   );
