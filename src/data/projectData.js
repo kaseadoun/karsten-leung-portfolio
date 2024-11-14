@@ -1,18 +1,18 @@
 export const projects = [
     {
         name: "Scalessembly - Video Game",
-        description: "",
+        description: "Casual arcade game developed for the Gamemaker's Toolkit Game Jam over a 5-day period.",
         techStack: ["C#", "Unity"],
         dependencies: [],
-        url: "https://kaseadoun.itch.io/scalessembly",
+        url: "kaseadoun.itch.io/scalessembly",
         image: "scalessembly.webp",
     },
     {
         name: "Weather App",
-        description: "",
+        description: "Single page weather application that searches the weather based on city from a third party API.",
         techStack: ["React.js", "CSS"],
         dependencies: [],
-        url: "",
+        url: " kaseadoun.github.io/weather-app/",
         image: "weather-app.webp",
     },
     {
@@ -25,15 +25,15 @@ export const projects = [
     },
     {
         name: "Etch-a-Sketch",
-        description: "",
+        description: "Drawing web application allowing the user to use their mouse to draw pictures on a size customizable canvas and custom paint color.",
         techStack: ["HTML", "CSS", "JavaScript"],
         dependencies: [],
-        url: "",
+        url: "kaseadoun.github.io/etch-a-sketch/",
         image: "etch-a-sketch.webp",
     },
     {
         name: "Island - Console Game",
-        description: "",
+        description: "Text-based time management adventure. Provides user with arrow key input, multiple paths to progress throughout the game, and an inventory system to carry items.",
         techStack: ["C#"],
         dependencies: [],
         url: "",
