@@ -2,13 +2,13 @@
 import logo from '../assets/kl-logo.png';
 // Dependency imports
 import { Link } from 'react-scroll';
-// Data import
-import projects from "../data/projectData";
+// Data imports
+import { navigation } from '../data/navigationData';
 
-function NavItems() {
+function NavItem({ id, title }) {
     return(
-        <Link>
-            <li></li>
+        <Link to={id}>
+            <li>| { title }</li>
         </Link>
     );
 }
@@ -20,10 +20,17 @@ export default function Sidebar() {
                 <img src={ logo }/>
             </div>
             <nav>
-
+                {
+                    navigation.map((navItem) => 
+                        <NavItem 
+                            id={ navItem.id }
+                            title={ navItem.title }
+                        />
+                    )
+                }
             </nav>
             <footer>
-
+                
             </footer>
         </header>
     );
