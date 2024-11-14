@@ -1,34 +1,42 @@
 export const projects = [
     {
-        id: 1,
-        name: "Etch-a-Sketch",
+        name: "Scalessembly - Video Game",
         description: "",
-        tech: ["HTML", "CSS", "JavaScript"],
+        techStack: ["C#", "Unity"],
         dependencies: [],
-        url: ""
+        url: "https://kaseadoun.itch.io/scalessembly",
+        image: "scalessembly.webp",
     },
     {
-        id: 2,
-        name: "Island - Console Game",
-        description: "",
-        tech: ["C#"],
-        dependencies: [],
-        url: ""
-    },
-    {
-        id: 3,
         name: "Weather App",
         description: "",
-        tech: ["React.js", "CSS"],
+        techStack: ["React.js", "CSS"],
         dependencies: [],
-        url: ""
+        url: "",
+        image: "weather-app.webp",
     },
     {
-        id: 4,
         name: "Portfolio Site",
         description: "",
-        tech: ["React.js", "CSS"],
+        techStack: ["React.js", "CSS"],
         dependencies: [],
-        url: ""
-    }
+        url: "",
+        image: "etch-a-sketch.webp",
+    },
+    {
+        name: "Etch-a-Sketch",
+        description: "",
+        techStack: ["HTML", "CSS", "JavaScript"],
+        dependencies: [],
+        url: "",
+        image: "etch-a-sketch.webp",
+    },
+    {
+        name: "Island - Console Game",
+        description: "",
+        techStack: ["C#"],
+        dependencies: [],
+        url: "",
+        image: "island.webp",
+    },
 ];
