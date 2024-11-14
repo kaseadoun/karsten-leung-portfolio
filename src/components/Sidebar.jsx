@@ -17,7 +17,7 @@ export default function Sidebar() {
     return(
         <header className="sidebar">
             <div>
-                <img src={ logo }/>
+                <img id="logo" src={ logo }/>
             </div>
             <nav>
                 {
@@ -30,7 +30,7 @@ export default function Sidebar() {
                 }
             </nav>
             <footer>
-                
+
             </footer>
         </header>
     );
