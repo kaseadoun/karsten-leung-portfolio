@@ -18,7 +18,7 @@ export default function ProjectItem({
             <a href={url}>{url}</a>
           </p>
         )}
-        <div>
+        <div className="tech-stack-container">
           {techStack.map((tech) => (
             <span className="technology-tag">{tech}</span>
           ))}
