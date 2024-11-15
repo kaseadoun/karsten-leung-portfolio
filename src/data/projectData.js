@@ -17,11 +17,11 @@ export const projects = [
     },
     {
         name: "Portfolio Site",
-        description: "",
+        description: "Portfolio website showcasing projects, skills, and experience with smooth scrolling navigation and clean design.",
         techStack: ["React.js", "CSS"],
         dependencies: [],
         url: "",
-        image: "etch-a-sketch.webp",
+        image: "portfolio.webp",
     },
     {
         name: "Etch-a-Sketch",
