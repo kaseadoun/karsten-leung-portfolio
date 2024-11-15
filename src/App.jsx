@@ -19,7 +19,11 @@ function App() {
           </div>
         </section>
         <section id="about-me">
-          <h2>Who am I?</h2>
+          <h2>About Me</h2>
+          <div className="about-me-content-container">
+            <img className="personal-photo" src="/karsten-leung-photo.webp" alt="Image of me"/>
+            <p></p>
+          </div>
         </section>
         <section id="projects">
           <h2>Projects</h2>
