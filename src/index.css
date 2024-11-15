@@ -23,12 +23,12 @@ h4,
 h5,
 h6,
 a,
+li,
 .demo {
   font-family: "Bebas Neue", sans-serif;
 }
 
 p,
-li,
 input,
 textarea,
 button,
@@ -67,6 +67,33 @@ h2 {
   height: 10em;
   margin: 50px;
   margin-top: 80px;
+}
+
+nav {
+  margin-top: 50px;
+  width: 100%;
+}
+
+ul {
+  gap: 25px;
+  width: 100%;
+}
+
+ul > *:hover {
+  background-color: var(--baby-powder);
+  color: var(--charcoal);
+}
+
+li {
+  padding-left: 15%;
+  color: var(--baby-powder);
+  font-size: 35px;
+}
+li:hover,
+li:hover a {
+  background-color: var(--baby-powder);
+  color: var(--charcoal);
+  cursor: pointer;
 }
 
 /* ---------- CONTENT CONTAINER ---------- */
@@ -120,7 +147,11 @@ section {
 .project-card-text {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.project-card-text h2 {
+  margin-bottom: -25px;
 }
 
 .technology-tag {
