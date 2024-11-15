@@ -52,6 +52,7 @@ h2 {
   position: fixed;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   height: 100vh;
   min-width: 250px;
@@ -62,6 +63,16 @@ h2 {
   z-index: 1;
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  gap: 60px;
+}
+
 #logo {
   border-radius: 30%;
   height: 10em;
@@ -70,13 +81,16 @@ h2 {
 }
 
 nav {
-  margin-top: 50px;
   width: 100%;
+  min-height: 35%;
 }
 
 ul {
-  gap: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
+  height: 100%;
 }
 
 ul > *:hover {
@@ -85,15 +99,40 @@ ul > *:hover {
 }
 
 li {
-  padding-left: 15%;
   color: var(--baby-powder);
   font-size: 35px;
+  display: block;
+  padding: .5rem 1rem;
+  padding-left: 15%;
 }
 li:hover,
 li:hover a {
   background-color: var(--baby-powder);
   color: var(--charcoal);
   cursor: pointer;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px;
+}
+.footer-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--baby-powder);
+  text-decoration: none;
+}
+.footer-icons {
+  font-size: 25px;
+  color: var(--baby-powder);
+}
+.footer-links:hover,
+.footer-icons:hover {
+  color: var(--baby-powder);
+  text-decoration: underline;
 }
 
 /* ---------- CONTENT CONTAINER ---------- */
@@ -108,9 +147,13 @@ li:hover a {
 section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 100vh;
   height: 100%;
+}
+
+#home {
+  justify-content: center;
 }
 
 /* ---------- HOME ---------- */
