@@ -1,3 +1,1 @@
-Check out my portfolio site!
-
-[link](karstenleung.dev)
+Check out my portfolio site at [karstenleung.dev](karstenleung.dev)!
