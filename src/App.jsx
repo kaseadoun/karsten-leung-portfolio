@@ -21,8 +21,24 @@ function App() {
         <section id="about-me">
           <h2>About Me</h2>
           <div className="about-me-content-container">
-            <img className="personal-photo" src="/karsten-leung-photo.webp" alt="Image of me"/>
-            <p></p>
+            <img
+              className="personal-photo"
+              src="/karsten-leung-photo.webp"
+              alt="Image of me"
+            />
+            <div className="personal-description-container">
+              <h4>Hi, I’m Karsten Leung</h4>
+              <p className="personal-description">
+                I'm a software developer who loves building
+                clean, functional, and visually appealing projects.
+              </p>
+              <p className="personal-description">
+                Whether it’s crafting smooth front-end experiences or dabbling
+                in game development as a hobby, I’m all about exploring new
+                ideas and pushing my skills further. I’m always curious and
+                excited to keep growing in the tech world!
+              </p>
+            </div>
           </div>
         </section>
         <section id="projects">
