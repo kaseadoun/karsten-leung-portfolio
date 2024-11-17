@@ -1,3 +1,11 @@
+function TechTag({ techName }) {
+  return(
+    <div className="technology-tag">
+      { techName }
+    </div>
+  );
+}
+
 export default function ProjectItem({
   name,
   description,
@@ -10,7 +18,7 @@ export default function ProjectItem({
     <div className="project-card">
       <img className="project-images" src={image} alt={ `Image of ${name}` }/>
       <div className="project-card-text">
-        <h2>{name}</h2>
+        <h3>{name}</h3>
         <p>{description}</p>
         {url && (
           <p className="demo-link">
@@ -20,7 +28,7 @@ export default function ProjectItem({
         )}
         <div className="tech-stack-container">
           {techStack.map((tech) => (
-            <span className="technology-tag">{tech}</span>
+            <TechTag techName={tech} />
           ))}
         </div>
       </div>
