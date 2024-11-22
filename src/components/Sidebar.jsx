@@ -1,6 +1,7 @@
 // Image imports
 import logo from "../assets/kl-logo.png";
 // Dependency imports
+import { useState, useEffect } from 'react';
 import { Link } from "react-scroll";
 // Data imports
 import { navigation } from "../data/navigationData";
@@ -19,6 +20,8 @@ function NavItem({ id, title }) {
 }
 
 export default function Sidebar() {
+
+
   return (
     <div className="sidebar">
       <header>

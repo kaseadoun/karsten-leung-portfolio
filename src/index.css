@@ -13,7 +13,7 @@
 }
 
 body {
-  background-color: var(--charcoal);
+  background-color: var(--baby-powder);
 }
 
 h1,
@@ -248,4 +248,24 @@ h4 {
   border: solid 3px;
   border-radius: 5px;
   margin-right: 10px;
+}
+
+/* Large phones */
+@media only screen and (min-width: 640px) {
+
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) {
+  
+}
+
+/* Laptops */
+@media only screen and (min-width: 1024px) {
+  
+}
+
+/* Desktops */
+@media only screen and (min-width: 1280px) {
+  
 }

@@ -1,3 +1,4 @@
+import { useState, useEffect, createContext } from "react";
 // Import stylesheet
 import "./index.css";
 // Data import
@@ -6,11 +7,25 @@ import { projects } from "./data/projectData";
 import Sidebar from "./components/Sidebar";
 import ProjectItem from "./components/ProjectItem";
 
+const WindowDimensionContext = createContext(null);
+
 function App() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
-    <div>
+    <WindowDimensionContext.Provider value={ windowWidth }>
       <Sidebar />
       <main className="content-container">
+        <p>Window: {windowWidth}</p>
         <section id="home">
           <h1>Karsten Leung</h1>
           <div className="tag-container">
@@ -55,7 +70,7 @@ function App() {
           ))}
         </section>
       </main>
-    </div>
+      </WindowDimensionContext.Provider>
   );
 }
 
