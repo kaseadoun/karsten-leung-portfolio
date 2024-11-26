@@ -1,16 +1,21 @@
-import { useState, useEffect, createContext } from "react";
+import { useState, useEffect } from "react";
 // Import stylesheet
 import "./index.css";
 // Data import
 import { projects } from "./data/projectData";
 // Import components
-import Sidebar from "./components/Sidebar";
+import Navigation from "./components/Navigation";
 import ProjectItem from "./components/ProjectItem";
-
-const WindowDimensionContext = createContext(null);
 
 function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  // Phone dimensions (min-width)
+  const breakpoints = {
+    LARGE_PHONE: 640,
+    TABLET: 768,
+    LAPTOP: 1024,
+    DESKTOP: 1280
+  }
 
   useEffect(() => {
     const handleResize = () => {
@@ -22,10 +27,12 @@ function App() {
   }, []);
 
   return (
-    <WindowDimensionContext.Provider value={ windowWidth }>
-      <Sidebar />
+    <div className="app-container">
+      <Navigation 
+        breakpoints={ breakpoints }
+        windowWidth={ windowWidth }
+      />
       <main className="content-container">
-        <p>Window: {windowWidth}</p>
         <section id="home">
           <h1>Karsten Leung</h1>
           <div className="tag-container">
@@ -70,7 +77,7 @@ function App() {
           ))}
         </section>
       </main>
-      </WindowDimensionContext.Provider>
+      </div>
   );
 }
 
