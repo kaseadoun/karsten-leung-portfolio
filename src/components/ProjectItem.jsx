@@ -13,6 +13,8 @@ export default function ProjectItem({
   dependencies,
   url,
   image,
+  breakpoints,
+  windowWidth
 }) {
   return (
     <div className="project-card">
