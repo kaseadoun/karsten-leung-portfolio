@@ -31,8 +31,6 @@ li,
 }
 
 p,
-input,
-textarea,
 button,
 label,
 span {
@@ -46,36 +44,200 @@ li {
 h1,
 h2 {
   color: var(--selective-yellow);
-  font-size: 5em;
 }
 
+h1 {
+  font-size: 6.5em;
+}
+
+h2 {
+  font-size: 4.5em;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main section {
+  text-align: center;
+  min-height: 90vh;
+  width: 100vw;
+  padding: 0 2.5vw;
+}
+
+/* ---------- HEADER AND FOOTER CONTAINER ---------- */
 .navigation {
   position: fixed;
   bottom: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 10vh;
   background-color: var(--charcoal);
   box-shadow: 0 0 20px var(--charcoal);
   z-index: 1;
+  overflow-x: auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-arrows {
+  position: fixed;
+  font-size: 2.5em;
+  margin: 0 3vw;
+  color: var(--baby-powder)
+}
+#nav-arrow-right {
+  right: 0;
 }
 
 ul {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  justify-content: space-around;
+  width: 300vw;
   height: 300%;
+}
+
+li {
+  color: var(--baby-powder);
+  font-size: 3.5em;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  translate
 }
 
 img {
   max-width: 200px;
 }
 
+/* ---------- HOME ---------- */
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-content, #home-text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-content {
+  align-items: center;
+}
+
+#logo {
+  border-radius: 30%;
+  max-height: 15em;
+  max-width: 15em;
+}
+
+.tag {
+  font-size: 2em;
+}
+
+.tag:nth-of-type(1) {
+  margin-top: -15px;
+}
+
+/* ---------- ABOUT ME ---------- */
+
+.about-me-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  width: 100%;
+  background-color: var(--eggshell);
+  gap: 20px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.personal-photo {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 50px;
+}
+
+.personal-description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  background-color: var(--baby-powder);
+  padding: 20px 20px;
+  border-radius: 20px;
+  width: 90vw;
+}
+
+h4 {
+  font-size: 40px;
+}
+.personal-description {
+  font-size: 1.5em;
+}
+
+/* ---------- PROJECT ITEM STYLING ---------- */
+.project-container {
+  display: grid;
+  max-width: 100vw;
+  grid-template-columns: auto auto;
+  justify-items: center;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 40vw;
+  background-color: var(--eggshell);
+  padding: 20px;
+  border-radius: 20px 0 0 20px;
+  margin-bottom: 50px;
+}
+
+.project-images {
+  max-width: 30vw;
+  max-height: 30vw;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: left;
+}
+
+.project-card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.project-card-text h2 {
+  margin-bottom: -25px;
+}
+
+.technology-tag {
+  font-family: "Roboto Condensed", sans-serif;
+  display: inline-block;
+  background-color: var(--white);
+  font-size: 1.2em;
+  padding: 2.5px 5px;
+  border: solid 3px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
 
 /* Large phones */
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 480px) {
   h1,
   h2 {
     color: var(--selective-yellow);
@@ -92,8 +254,8 @@ img {
   }
 }
 
-/* Laptops */
-@media only screen and (min-width: 1024px) {
+/* Smaller desktop views */
+@media only screen and (min-width: 992px) {
   h1,
   h2 {
     color: var(--selective-yellow);
@@ -103,218 +265,5 @@ img {
 
 /* Desktops */
 @media only screen and (min-width: 1280px) {
-  h1,
-  h2 {
-    font-weight: 900;
-    font-size: 20em;
-    /* font-size: 200px; */
-  }
-
-  h2 {
-    font-size: 150px;
-  }
-
-  h3 {
-    font-size: 70px;
-  }
-
-  /* ---------- HEADER AND FOOTER CONTAINER ---------- */
-  .navigation {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 100vh;
-    min-width: 250px;
-    max-width: 300px;
-    width: 20vw;
-    height: 100vh;
-    background-color: var(--charcoal);
-    box-shadow: 0 0 20px var(--charcoal);
-    top: 0;
-    z-index: 1;
-  }
-
-  header {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    gap: 60px;
-  }
-
-  #logo {
-    border-radius: 30%;
-    height: 10em;
-    margin: 50px;
-    margin-top: 80px;
-  }
-
-  nav {
-    width: 100%;
-    min-height: 35%;
-  }
-
-  ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-  }
-
-  ul > *:hover {
-    background-color: var(--baby-powder);
-    color: var(--charcoal);
-  }
-
-  li {
-    color: var(--baby-powder);
-    font-size: 35px;
-    display: block;
-    padding: 0.5rem 1rem;
-    padding-left: 15%;
-  }
-  li:hover,
-  li:hover a {
-    background-color: var(--baby-powder);
-    color: var(--charcoal);
-    cursor: pointer;
-  }
-
-  footer {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 20px;
-  }
-  .footer-links {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    color: var(--baby-powder);
-    text-decoration: none;
-  }
-  .footer-icons {
-    font-size: 25px;
-    color: var(--baby-powder);
-  }
-  .footer-links:hover,
-  .footer-icons:hover {
-    color: var(--baby-powder);
-    text-decoration: underline;
-  }
-
-  /* ---------- CONTENT CONTAINER ---------- */
-  .content-container {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--baby-powder);
-    height: 100%;
-    padding-left: 350px;
-  }
-
-  section {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    min-height: 100vh;
-    height: 100%;
-  }
-
-  /* ---------- HOME ---------- */
-  #home {
-    justify-content: center;
-  }
-
-  .tag {
-    font-size: 40px;
-    margin: 0 0 10px 10px;
-  }
-
-  .tag:nth-of-type(1) {
-    margin-top: -30px;
-  }
-
-  /* ---------- ABOUT ME ---------- */
-
-  .about-me-content-container {
-    display: flex;
-    margin-top: 50px;
-    background-color: var(--eggshell);
-    gap: 20px;
-    padding: 20px;
-    border-radius: 20px;
-  }
-
-  .personal-photo {
-    max-width: 500px;
-    max-height: 500px;
-    border-radius: 20px;
-  }
-
-  .personal-description-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
-    background-color: var(--baby-powder);
-    padding: 20px 40px;
-    border-radius: 20px;
-    width: 60%;
-  }
-
-  h4 {
-    font-size: 40px;
-  }
-  .personal-description {
-    font-size: 1.5em;
-  }
-
-  /* ---------- PROJECT ITEM STYLING ---------- */
-  .project-card {
-    display: flex;
-    gap: 40px;
-    max-width: 1543px;
-    min-width: 500px;
-    min-height: 300px;
-    width: 100vw;
-    background-color: var(--eggshell);
-    padding: 20px;
-    border-radius: 20px 0 0 20px;
-    margin-bottom: 50px;
-  }
-
-  .project-images {
-    min-width: 100px;
-    min-height: 100px;
-    max-width: 300px;
-    max-height: 300px;
-    border-radius: 20px;
-    object-fit: cover;
-    object-position: left;
-  }
-
-  .project-card-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-
-  .project-card-text h2 {
-    margin-bottom: -25px;
-  }
-
-  .technology-tag {
-    font-family: "Roboto Condensed", sans-serif;
-    display: inline-block;
-    background-color: var(--white);
-    padding: 5px 10px;
-    border: solid 3px;
-    border-radius: 5px;
-    margin-right: 10px;
-  }
+ 
 }
