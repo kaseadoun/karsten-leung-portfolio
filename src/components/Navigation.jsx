@@ -1,6 +1,6 @@
 // Dependency imports
-import { useState } from "react";
-import { Link } from "react-scroll";
+import { useRef, useState, useEffect } from "react";
+import { Link, scroller } from "react-scroll";
 // Data imports
 import { navigation } from "../data/navigationData";
 // FontAwesome
@@ -23,11 +23,61 @@ function NavItem({ id, title }) {
   );
 }
 
-export default function Navigation({ windowWidth, breakpoints, logoSrc }) {
+export default function Navigation({ windowWidth, breakpoints, logoSrc, activeSection }) {
+  const navigationRef = useRef(null);
   const [index, setIndex] = useState(0);
 
   const navLength = navigation.length;
   let isDesktop = windowWidth >= breakpoints.TABLET;
+
+  useEffect(() => {
+    if (navigation[index]) {
+      scroller.scrollTo(navigation[index].id, {
+        duration: 600,
+        smooth: true,
+        offset: index !== 0 ? -50 : 0, 
+      });
+    }
+  }, [index]);
+
+  const handleScroll = () => {
+    const scrollLeft = navigationRef.current.scrollLeft;
+    const containerWidth = navigationRef.current.offsetWidth;
+    const totalScrollWidth = navigationRef.current.scrollWidth;
+
+    if (navigationRef.current) {
+      console.log("Horizontal:", navigationRef.current.scrollLeft);
+      console.log("Container Width:", navigationRef.current.offsetWidth);
+      console.log("Scroll Width:", navigationRef.current.scrollWidth);
+    }
+
+    const itemWidth = (totalScrollWidth - containerWidth) / 2;
+
+    const newIndex = Math.round(scrollLeft / itemWidth);
+
+    const targetScroll = newIndex * itemWidth;
+
+    if (Math.abs(scrollLeft - targetScroll) > 0) {
+      navigationRef.current.scrollTo({
+        left: targetScroll,
+        behavior: "smooth",
+      });
+    }
+
+    setIndex(newIndex);
+  }
+
+  useEffect(() => {
+    const element = navigationRef.current;
+    if (element) {
+      element.addEventListener("mouseup", handleScroll);
+    }
+    return () => {
+      if (element) {
+        element.removeEventListener("mouseup", handleScroll);
+      }
+    }
+  }, []);
 
   function previousNavItem() {
     setIndex((index) => {
@@ -37,6 +87,7 @@ export default function Navigation({ windowWidth, breakpoints, logoSrc }) {
 
       return index - 1;
     });
+    navigationRef.current.scrollLeft -= window.innerWidth;
   }
 
   function nextNavItem() {
@@ -47,10 +98,18 @@ export default function Navigation({ windowWidth, breakpoints, logoSrc }) {
 
       return index + 1;
     });
+    navigationRef.current.scrollLeft += window.innerWidth;
   }
 
   return (
-    <div className="navigation">
+    <div className="navigation" ref={navigationRef}
+    
+    onScroll={() => {
+      // Debounce the lockScroll function for smoother performance
+      clearTimeout(navigationRef.current?.scrollTimeout);
+      navigationRef.current.scrollTimeout = setTimeout(handleScroll, 200);
+    }}
+    >
       <header>
         {isDesktop && (
           <div>
@@ -65,7 +124,7 @@ export default function Navigation({ windowWidth, breakpoints, logoSrc }) {
               onClick={previousNavItem}
             />
           )}
-          <ul style={!isDesktop && { translate: `${1 * index}%` }}>
+          <ul>
             {navigation.map((navItem) => (
               <NavItem
                 id={navItem.id}
