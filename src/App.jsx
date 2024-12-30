@@ -87,7 +87,7 @@ function App() {
           ref={(el) => (sectionRefs.current[0] = el)}
           key={0}
         >
-          {windowWidth >= breakpoints.TABLET ? (
+          {windowWidth >= breakpoints.LAPTOP ? (
             <>
               <h1>Karsten Leung</h1>
               <div className="tag-container">

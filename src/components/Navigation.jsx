@@ -28,14 +28,14 @@ export default function Navigation({ windowWidth, breakpoints, logoSrc, activeSe
   const [index, setIndex] = useState(0);
 
   const navLength = navigation.length;
-  let isDesktop = windowWidth >= breakpoints.TABLET;
+  let isDesktop = windowWidth >= breakpoints.LAPTOP;
 
   useEffect(() => {
     if (navigation[index]) {
       scroller.scrollTo(navigation[index].id, {
         duration: 600,
         smooth: true,
-        offset: index !== 0 ? -50 : 0, 
+        offset: index !== 0 ? -40 : 0, 
       });
     }
   }, [index]);
@@ -142,7 +142,7 @@ export default function Navigation({ windowWidth, breakpoints, logoSrc, activeSe
           )}
         </nav>
       </header>
-      {windowWidth >= breakpoints.TABLET && (
+      {windowWidth >= breakpoints.LAPTOP && (
         <footer>
           <a class="footer-links" href="https://github.com/kaseadoun">
             <i class="fa-brands fa-square-github footer-icons"></i>
