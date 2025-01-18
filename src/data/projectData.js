@@ -16,7 +16,7 @@ export const projects = [
     {
         name: "Weather App",
         description: "Single page weather application that searches the weather based on city from a third party API. Utilized Chart.js to display hour precipitation forecast.",
-        techStack: ["React.js", "CSS"],
+        techStack: ["React.js", 'TypeScript', "CSS"],
         url: "https://kaseadoun.github.io/weather-app/",
         image: "weather-app.webp",
     },
