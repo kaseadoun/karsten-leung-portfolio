@@ -4,6 +4,7 @@ export const projects = [
         description: "Casual arcade game developed for the Gamemaker's Toolkit Game Jam over a 5-day period.",
         techStack: ["C#", "Unity"],
         url: "https://kaseadoun.itch.io/scalessembly",
+        text: "Link to Demo on itch.io",
         image: "scalessembly.webp",
     },
     {
@@ -11,6 +12,7 @@ export const projects = [
         description: "Finance tracker web app built for a school project to log and visualize expenses and income with Chart.js.",
         techStack: ["HTML", "CSS", "JavaScript", "Handlebars", "Node.js", "Express.js", "MongoDB"],
         url: "https://karsten-leung-assignment-2-finance.onrender.com/",
+        text: "Link to Demo (Loading can take 30 to 50 seconds)",
         image: "finance-tracker-web-app.webp",
     },
     {
@@ -18,6 +20,7 @@ export const projects = [
         description: "Single page weather application that searches the weather based on city from a third party API. Utilized Chart.js to display hour precipitation forecast.",
         techStack: ["React.js", 'TypeScript', "CSS"],
         url: "https://kaseadoun.github.io/weather-app/",
+        text: "Link to Demo",
         image: "weather-app.webp",
     },
     {
@@ -25,6 +28,7 @@ export const projects = [
         description: "Portfolio website showcasing projects, skills, and experience with smooth scrolling navigation and clean design.",
         techStack: ["React.js", "CSS"],
         url: "https://karstenleung.dev",
+        text: "Link to Demo",
         image: "portfolio.webp",
     },
     {
@@ -32,6 +36,7 @@ export const projects = [
         description: "Drawing web application allowing the user to use their mouse to draw pictures on a size customizable canvas and custom paint color.",
         techStack: ["HTML", "CSS", "JavaScript"],
         url: "https://kaseadoun.github.io/etch-a-sketch/",
+        text: "Link to Demo",
         image: "etch-a-sketch.webp",
     },
     {
@@ -39,6 +44,7 @@ export const projects = [
         description: "Text-based time management adventure. Provides user with arrow key input, multiple paths to progress throughout the game, and an inventory system to carry items.",
         techStack: ["C#"],
         url: "https://github.com/kaseadoun/island",
+        text: "Link to GitHub Repo",
         image: "island.webp",
     },
 ];

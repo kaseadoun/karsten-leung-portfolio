@@ -10,11 +10,9 @@ export default function ProjectItem({
   name,
   description,
   techStack,
-  dependencies,
   url,
   image,
-  breakpoints,
-  windowWidth
+  text
 }) {
   return (
     <div className="project-card">
@@ -25,7 +23,7 @@ export default function ProjectItem({
         {url && (
           <p className="demo-link">
             <span className="demo">DEMO: </span>
-            <a href={url}>{url}</a>
+            <a href={url} target="_blank">{text}</a>
           </p>
         )}
         <div className="tech-stack-container">

@@ -122,14 +122,7 @@ function App() {
             <div className="personal-description-container">
               <h4>Hi, I’m Karsten Leung</h4>
               <p className="personal-description">
-                I'm a software developer who loves building clean, functional,
-                and visually appealing projects.
-              </p>
-              <p className="personal-description">
-                Whether it’s crafting smooth front-end experiences or dabbling
-                in game development as a hobby, I’m all about exploring new
-                ideas and pushing my skills further. I’m always curious and
-                excited to keep growing in the tech world!
+                I'm a passionate aspiring software developer actively seeking an internship opportunity. With a strong interest in developing and a growing skill set in various programming languages and frameworks, I’m eager to contribute to development teams while learning and growing my technical expertise.
               </p>
             </div>
           </div>
@@ -149,11 +142,9 @@ function App() {
                 name={project.name}
                 description={project.description}
                 techStack={project.techStack}
-                dependencies={project.dependencies}
                 url={project.url}
                 image={`/project-images/${project.image}`}
-                breakpoints={breakpoints}
-                windowWidth={windowWidth}
+                text={project.text}
               />
             ))}
           </div>
