@@ -18,7 +18,7 @@ export default function ProjectItem({
     <div className="project-card">
       <img className="project-images" src={image} alt={ `Image of ${name}` }/>
       <div className="project-card-text">
-        <h3>{name}</h3>
+        <h3>{name.toUpperCase()}</h3>
         <p>{description}</p>
         {url && (
           <p className="demo-link">
