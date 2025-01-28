@@ -1,0 +1,34 @@
+[
+    {
+        "tech": "HTML5",
+        "icon": "html5.svg"
+    },
+    {
+        "tech": "CSS3",
+        "icon": "css3.svg"
+    },
+    {
+        "tech": "JavaScript",
+        "icon": "js.svg"
+    },
+    {
+        "tech": "TypeScript",
+        "icon": "typescript.svg"
+    },
+    {
+        "tech": "React.js",
+        "icon": "reactjs.svg"
+    },
+    {
+        "tech": "Node.js",
+        "icon": "nodejs.svg"
+    },
+    {
+        "tech": "MongoDB",
+        "icon": "mongodb.svg"
+    },
+    {
+        "tech": "C Sharp",
+        "icon": "csharp.svg"
+    }
+]
