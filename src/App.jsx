@@ -2,13 +2,20 @@ import { useState, useEffect, useRef } from "react";
 // Import stylesheet
 import "./index.css";
 // Data import
-import { projects } from "./data/projectData";
+import projects from "./data/projectData";
 // Import components
 import Navigation from "./components/Navigation";
 import ProjectItem from "./components/ProjectItem";
+import TechIcons from "./components/TechItem";
 // Import Assets
 // Image imports
 import logo from "./assets/kl-logo.png";
+// FontAwesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -71,61 +78,56 @@ function App() {
         return -1; // In case no match is found
     }
     console.log(sectionIndex);
-  }, [activeSection])
+  }, [activeSection]);
 
   return (
     <div className="app-container">
-      <Navigation
+      {/* <Navigation
         activeSection={activeSection} // Pass the active section to Navigation
         breakpoints={breakpoints}
         windowWidth={windowWidth}
         logoSrc={logo}
-      />
+      /> */}
       <main className="content-container">
-        <section
-          id="home"
-          ref={(el) => (sectionRefs.current[0] = el)}
-          key={0}
-        >
-          {windowWidth >= breakpoints.LAPTOP ? (
-            <>
-              <h1>Karsten Leung</h1>
-              <div className="tag-container">
-                <p className="tag">| Software Developer</p>
-                <p className="tag">| Game Dev Hobbyist</p>
-              </div>
-            </>
-          ) : (
-            <div id="home-content">
-              <img id="logo" src={logo} />
-              <div id="home-text-content">
-                <h1>Karsten Leung</h1>
-                <div className="tag-container">
-                  <p className="tag">Software Developer | Game Dev Hobbyist</p>
-                </div>
-              </div>
+        <section id="home" ref={(el) => (sectionRefs.current[0] = el)} key={0}>
+          <img id="logo" src={logo} />
+          <div id="home-text">
+            <h1>KARSTEN LEUNG</h1>
+            <p id="title-tag">Software Developer</p>
+            <p id="summary-tag">
+              I love building pixel perfect digital experiences on the web and
+              dabbling in game development.
+            </p>
+            <div id="social-icon-container">
+              <a className="social-links" href="https://github.com/kaseadoun">
+                <i class="fa-brands fa-square-github social-icons"></i>
+              </a>
+              <a
+                className="social-links"
+                href="https://www.linkedin.com/in/karsten-leung/"
+              >
+                <i class="fa-brands fa-linkedin social-icons"></i>
+              </a>
             </div>
-          )}
+          </div>
         </section>
         <section
           id="about-me"
           ref={(el) => (sectionRefs.current[1] = el)}
           key={1}
         >
-          <h2>About Me</h2>
-          <div className="about-me-content-container">
-            <img
-              className="personal-photo"
-              src="/karsten-leung-photo.webp"
-              alt="Image of me"
-            />
-            <div className="personal-description-container">
-              <h4>Hi, I’m Karsten Leung</h4>
-              <p className="personal-description">
-                I'm a passionate aspiring software developer actively seeking an internship opportunity. With a strong interest in developing and a growing skill set in various programming languages and frameworks, I’m eager to contribute to development teams while learning and growing my technical expertise.
-              </p>
-            </div>
-          </div>
+          <h2>ABOUT</h2>
+          <p className="about-text">
+            I'm a passionate aspiring software developer actively seeking an
+            internship opportunity. With a strong interest in developing and a
+            growing skill set in various programming languages and frameworks,
+            I’m eager to contribute to development teams while learning and
+            growing my technical expertise.
+          </p>
+        </section>
+        <section>
+          <h2>TECH STACK</h2>
+          <TechIcons />
         </section>
         <section
           id="projects"
@@ -135,7 +137,7 @@ function App() {
             height: "100vh",
           }}
         >
-          <h2>Projects</h2>
+          <h2>PROJECTS</h2>
           <div className="project-container">
             {projects.map((project) => (
               <ProjectItem
