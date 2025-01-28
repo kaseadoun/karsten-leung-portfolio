@@ -147,6 +147,7 @@ function App() {
                 url={project.url}
                 image={`/project-images/${project.image}`}
                 text={project.text}
+                projectType={project.projectType}
               />
             ))}
           </div>
