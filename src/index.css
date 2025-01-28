@@ -1,8 +1,10 @@
 /* GENERAL STYLING */
 :root {
   --background-colour: #121212;
-  --secondary-color: #1e1d21;
-  --tertiary-color: #28262f;
+  --project-card-colour: #1A1A1B;
+  --project-card-border-colour: #36353C;
+  --tech-tag-background-colour: #2F2E34;
+  --tech-tag-border-colour: #434249;
   /* Text Colors */
   --yellow: #ffea00;
   --grey-5: #e0e0e0;
@@ -17,10 +19,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-img {
-  max-width: 80vw;
 }
 
 body {
@@ -71,6 +69,7 @@ h2 {
 
 h3 {
   font-size: 2.5em;
+  font-weight: 800;
 }
 
 p {
@@ -143,20 +142,6 @@ section {
 }
 
 /* ---------- TECH STACK */
-/* .tech-stack-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(12vw, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-  width: 80%;
-  justify-content: center;
-  align-content: center;
-}
-.tech-stack-container img {
-  max-width: 100%;
-  object-fit: contain;
-  text-align: center;
-} */
 .tech-stack-container {
   display: flex;
   flex-wrap: wrap;
@@ -167,4 +152,59 @@ section {
 }
 .tech-stack-container img {
   max-width: 12vw;
+}
+
+/* ---------- PROJECTS */
+.project-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-bottom: 40px;
+}
+.project-card {
+  width: 100%;
+}
+.project-images {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+.project-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--project-card-colour);
+  border: var(--project-card-border-colour) 1px solid;
+  border-radius: 0 0 8px 8px;
+  padding: 15px;
+  margin-top: -5px;
+}
+.project-title-link {
+  text-decoration: none;
+}
+.project-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.project-link-icon {
+  font-size: 0.7em;
+}
+.project-classification {
+  font-weight: 500;
+}
+.project-description {
+  line-height: 1.5em;
+}
+.project-tech-stack-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 8px;
+}
+.project-tech-tag {
+  background-color: var(--tech-tag-background-colour);
+  border: var(--tech-tag-border-colour) 1px solid;
+  border-radius: 3px;
+  padding: 3px 6px;
+  font-weight: 500;
 }
