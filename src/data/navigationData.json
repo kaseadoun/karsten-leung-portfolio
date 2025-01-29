@@ -1,17 +1,14 @@
 [
     {
-        "index": 0,
-        "id": "home",
-        "title": "home"
-    },
-    {
-        "index": 1,
         "id": "about-me",
-        "title": "about me"
+        "title": "About"
     },
     {
-        "index": 2,
+        "id": "tech-stack",
+        "title": "Tech"
+    },
+    {
         "id": "projects",
-        "title": "projects"
+        "title": "Projects"
     }
 ]
