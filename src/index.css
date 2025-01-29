@@ -32,7 +32,6 @@ h4,
 h5,
 h6,
 a,
-li,
 .demo {
   font-family: "Roboto Flex", serif;
 }
@@ -48,7 +47,8 @@ h1 {
 p,
 button,
 label,
-span {
+span,
+li {
   font-family: "Roboto", serif;
 }
 
@@ -57,7 +57,8 @@ li {
 }
 
 h1,
-h3 {
+h3,
+h4 {
   color: var(--yellow);
 }
 
@@ -101,7 +102,41 @@ section {
   gap: 30px;
 }
 
+/* ---------- NAVIGATION */
+.navigation {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px 20px;
+  background-color: var(--background-colour);
+}
+
+h4 {
+  font-size: 4em;
+  transform: scaleY(0.8);
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  width: 60%;
+}
+li {
+  font-size: 1.8em;
+  color: var(--grey-5);
+}
+li:hover {
+  cursor: pointer;
+}
+
 /* ---------- HOME */
+#home {
+  padding-top: 70px;
+  min-height: 80vh
+}
 #logo {
   margin: 40px 0;
 }
