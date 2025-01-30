@@ -1,9 +1,9 @@
 /* GENERAL STYLING */
 :root {
   --background-colour: #121212;
-  --project-card-colour: #1A1A1B;
-  --project-card-border-colour: #36353C;
-  --tech-tag-background-colour: #2F2E34;
+  --project-card-colour: #1a1a1b;
+  --project-card-border-colour: #36353c;
+  --tech-tag-background-colour: #2f2e34;
   --tech-tag-border-colour: #434249;
   /* Text Colors */
   --yellow: #ffea00;
@@ -97,7 +97,6 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   margin: 40px 0;
   gap: 30px;
 }
@@ -110,6 +109,7 @@ section {
   width: 100%;
   padding: 5px 20px;
   background-color: var(--background-colour);
+  z-index: 1;
 }
 
 h4 {
@@ -134,8 +134,7 @@ li:hover {
 
 /* ---------- HOME */
 #home {
-  padding-top: 70px;
-  min-height: 80vh
+  padding-top: 40px;
 }
 #logo {
   margin: 40px 0;
@@ -242,4 +241,133 @@ li:hover {
   border-radius: 3px;
   padding: 3px 6px;
   font-weight: 500;
+}
+
+/* Large phones */
+@media only screen and (min-width: 480px) {
+  /* ---------- GENERAL */
+  p {
+    font-size: 1.6em;
+  }
+  /* ---------- NAVIGATION */
+  ul {
+    width: 45%;
+  }
+  /* ---------- HOME */
+  #summary-tag {
+    font-size: 1.6em;
+    line-height: 25px;
+  }
+  /* ---------- ABOUT */
+  .about-text {
+    line-height: 25px;
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) {
+  /* ---------- NAVIGATION */
+  ul {
+    width: 30%;
+  }
+  /* ---------- HOME */
+  #home-text {
+    width: 80%;
+  }
+  /* ---------- PROJECTS */
+  #projects {
+    width: 100%;
+  }
+  .project-container {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .project-card {
+    width: 40%;
+    min-height: 40vh;
+  }
+  .project-images {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+  }
+  .project-card-text {
+    width: 100%;
+    height: 50%;
+    overflow-y: scroll;
+    justify-content: space-between;
+  }
+}
+
+/* Smaller desktop views */
+@media only screen and (min-width: 1024px) {
+  /* ---------- NAVIGATION */
+  ul {
+    width: 20%;
+  }
+  /* ---------- HOME */
+  #home {
+    width: 100%;
+  }
+  #home-text {
+    width: 100%;
+    gap: 5px;
+  }
+  h1 {
+    font-size: 5.5em;
+  }
+  #title-tag {
+    font-size: 2em;
+  }
+  #social-icon-container {
+    width: 15%;
+  }
+  /* ---------- TECH STACK */
+  .tech-stack-container img {
+    max-width: 7vw;
+  }
+  /* ---------- ABOUT */
+  .about-text {
+    line-height: 25px;
+    width: 80%;
+  }
+  /* ---------- PROJECTS */
+  #projects {
+    width: 80%;
+  }
+}
+
+/* Desktops */
+@media only screen and (min-width: 1280px) {
+  /* ---------- NAVIGATION */
+  ul {
+    width: 15%;
+  }
+  /* ---------- HOME */
+  #home {
+    padding-top: 100px;
+  }
+  h1 {
+    font-size: 6.5em;
+  }
+  #social-icon-container {
+    width: 10%;
+  }
+  .social-links {
+    font-size: 5rem;
+  }
+  /* ---------- ABOUT */
+  .about-text {
+    width: 50%;
+  }
+
+  /* ---------- PROJECT */
+  .project-container {
+    width: 70%;
+  }
+  .project-card-text {
+    overflow: hidden;
+  }
 }
